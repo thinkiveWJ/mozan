@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link href="../../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../../style/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="../../style/ui.chosen.css" rel="stylesheet"/>
+    <link href="../../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="../../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../../js/page.common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="main">
+    <div class="container" >
+        <div class="row search-box">
+            <h4 class="title">角色管理</h4>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">角色名称：</label>
+                    <input type="text" id="" placeholder="角色名称" class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-12 text-right search-btn">
+                <a type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-search"></sapn> 查询</a>
+                <a id="addRole" type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-plus"></sapn> 增加角色</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead>
+                    <td style="margin-left: 15px;"><input id="all" type="checkbox"></td>
+                    <td>序号</td>
+                    <td>角色名称</td>
+                    <td>角色描述</td>
+                    <td>操作</td>
+                </thead>
+                <tbody id="tbody">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <ul id="pager"></ul>
+        </div>
+    </div>
+</div>
+<!-- 添加|修改 角色 -->
+<div class="modal fade" id="rolePanel" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加角色</h4>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <div class="form-display">
+                        <label for="" class="form-label">角色名称：</label><input type="text" class="form-control form-input">
+                    </div>
+                    <div class="form-display">
+                        <label class="form-label form-label-top">描述：</label><textarea class="form-input form-textarea"></textarea>
+                    </div>
+                    <div class="form-display form-inline">
+                        <label class="form-label form-label-top">权限：</label>
+                        <div class="row form-input">
+                            <div class="col-xs-4"><label class="checkbox-inline" id="module"><input type="checkbox">模块1</label></div>
+                            <div class="col-xs-8" id="moduleSub">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="form-label"> </label>
+                        <div class="row form-input">
+                            <div class="col-xs-4"><label class="checkbox-inline" id="module2"><input type="checkbox">模块1</label></div>
+                            <div class="col-xs-8" id="module2Sub">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                        <label class="checkbox-inline"><input type="checkbox">功能1</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+                <button type="button" class="btn btn-primary ok"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="roleManagement.js"></script>
+</body>
+</html>

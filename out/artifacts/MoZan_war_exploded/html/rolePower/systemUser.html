@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link href="../../style/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="../../style/ui.chosen.css" rel="stylesheet"/>
+    <link href="../../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="../../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../../js/page.common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="main">
+    <div class="container" >
+        <div class="row search-box">
+            <h4 class="title">系统用户</h4>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">用户名：</label>
+                    <input type="text" id="" placeholder="用户名" class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-12 text-right search-btn">
+                <a type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-search"></sapn> 查询</a>
+                <a id="addUser" type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-plus"></sapn> 增加用户</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead>
+                    <td style="margin-left: 15px;"><input id="all" type="checkbox"></td>
+                    <td>序号</td>
+                    <td>用户名</td>
+                    <td>所属角色</td>
+                    <td>操作</td>
+                </thead>
+                <tbody id="tbody">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <ul id="pager"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- 添加|修改 用户 -->
+<div class="modal fade" id="userPanel" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="form-display">
+                        <label class="form-label no-select">用户名：</label>
+                        <input type="text" class="form-input form-control">
+                    </div>
+                    <div class="form-display">
+                        <label class="form-label no-select">密码：</label>
+                        <input type="text" class="form-input form-control">
+                    </div>
+                    <div class="form-display">
+                        <label class="form-label no-select">角色：</label>
+                        <select id="userChosen" data-xtype="chosen" class="form-input"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+                <button type="button" class="btn btn-primary ok"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="systemUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>常见问题</title>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #f5f5f5;
+            font-family: "Microsoft YaHei";
+        }
+        ul li{
+            list-style: none;
+            padding: 15px;
+            background: #FFFFFF;
+        }
+        .main{
+            margin: 15px auto;
+        }
+        h4.text-center{
+            text-align: center;
+            font-size: 18px;
+            background: #FFFFFF;
+            height: 30px;
+            line-height: 30px;
+            padding: 15px;
+        }
+        .main > ul{
+            margin: 8px auto;
+        }
+        .main > ul > li + li{
+            margin-top: 8px;
+        }
+        .main > ul > li > .title{
+            font-size: 16px;
+        }
+        .main > ul > li.on > .title{
+            color: #F6862C;
+        }
+        .main > ul > li > .content{
+            font-size: 14px;
+            margin-top: 8px;
+            padding-left: 15px;
+            display: none;
+        }
+        .main > ul > li > .content > p{
+            display: block;
+            margin:5px auto;
+        }
+        .main > ul > li > .content .details{
+            padding-left: 15px;
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".main li").click(function () {
+                var flag = $(this).hasClass("on");
+                if(flag){
+                    $(this).removeClass("on");
+                    $(this).find(".content").slideUp();
+                }else{
+                    $(this).addClass("on");
+                    $(this).find(".content").slideDown();
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h4 class="text-center">摩赞手环Q&A</h4>
+        <ul>
+            <li>
+                <div class="title">1.摩赞手环有哪些功能？</div>
+                <div class="content">
+                    全天的运动计步、能量消耗；睡眠监测分析；手环闹钟，久坐提醒和来电及消息提醒；微信运动排行，时间和日历等功能。
+                </div>
+            </li>
+            <li>
+                <div class="title">2.摩赞手环是否防水？</div>
+                <div class="content">
+                    摩赞手环支持IP67级防水，但是不建议佩戴手环游泳和淋浴。
+                </div>
+            </li>
+            <li>
+                <div class="title">3.摩赞手环正常的工作温度和湿度是多少？</div>
+                <div class="content">
+                    摩赞手环可正常工作温度：-20到70摄氏度；相对湿度：10%-95%无凝结。
+                </div>
+            </li>
+            <li>
+                <div class="title">4.摩赞手环配套APP系统要求？</div>
+                <div class="content">
+                    IOS8.0及以上；Android4.4及以上；蓝牙4.0及以上。
+                </div>
+            </li>
+            <li>
+                <div class="title">5.摩赞手环售后服务政策是什么？</div>
+                <div class="content">
+                    <p>1）自签收之日起，如配件齐全且无人为损坏，七天无理由退货，十五天换货，一年免费维修服务</p>
+                    <p>2）腕带变脏、私自改装、因接触化学试剂、接触尖锐物体等人为因素导致损坏、在非正常使用环境下使用（游泳、淋浴等）的不在质保范围内。</p>
+                    <p>3）用户退换货或维修服务需提供有效保修凭证和购物发票。</p>
+                    <p> 4）因质量问题办理退换服务在邮寄商品时，此过程中产生的相关运费由客户自己承担。</p>
+                    <p> 5）以下情况不予办理退换货</p>
+                    <div class="details">
+                        <p>a. 对于过保商品（超过三包保修期的商品）；</p>
+                        <p>b. 商品的外包装、附件、赠品、说明书不完整，发票缺失或涂改；</p>
+                        <p>c. 因不可抗力造成的损坏；</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="title">6.摩赞手环如何充电？</div>
+                <div class="content">
+                    摩赞手环配备专用充电底座，将充电底座通过卡槽卡在手环主体背面，然后连接普通Android手机充电线即可。
+                </div>
+            </li>
+            <li>
+                <div class="title">7.摩赞手环有配套使用的手机APP吗？如何获取？</div>
+                <div class="content">
+                    摩赞手环有配合使用的手机APP（摩赞生活），用户可以扫描说明书上的下载二维码或者在APPstore或各大Android应用市场搜索“摩赞生活”获取。
+                </div>
+            </li>
+            <li>
+                <div class="title">8.摩赞手环和摩赞生活配套使用时如何连接？</div>
+                <div class="content">
+                    全天的运动计步、能量消耗；睡眠监测分析；手环闹钟，久坐提醒和来电及消息提醒；微信运动排行，时间和日历等功能。
+                </div>
+            </li>
+            <li>
+                <div class="title">9.摩赞手环和摩赞生活APP配套使用时需要蓝牙一直打开吗？</div>
+                <div class="content">
+                    运动计步、睡眠监测分析，手环闹钟，久坐提醒，微信运动排行，时间和日历等功能是不需要一直开启蓝牙连接手机的，只需要在使用摩赞生活APP时连接一次同步手环数据到手机APP即可。
+                    手环来电提醒和消息提醒功能由于需要实时了解手机是否有来电和消息情况所以需要蓝牙一直打开并连接手机APP。
+                </div>
+            </li>
+            <li>
+                <div class="title">10.如果摩赞手环连接不上摩赞生活怎么办？</div>
+                <div class="content">
+                    <p>摩赞手环连接不上手环主要原因有几个：</p>
+                    <div class="details">
+                        <p>a，手环没电，手环充电后即可解决；</p>
+                        <p>b，手机蓝牙没开，开启手机蓝牙解决；</p>
+                        <p>c，手环已经被其他手机绑定，请确定附近是否有其他手机绑定手环，解绑后即可使用新手机重新绑定。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="title">11.手环和手机如何同步数据，同步数据时同步失败或一直在同步中？</div>
+                <div class="content">
+                    摩赞手环与手机采用蓝牙连接方式同步数据，所以当手环与手机连接之后，会自动同步数据，
+                    同步数据时失败主要可能原因时同步过程中手环与手机蓝牙连接断开或手环蓝牙已经被其他设备连接，
+                    确定手环与手机连接之后重试即可。
+                </div>
+            </li>
+            <li>
+                <div class="title">12.手环与手机同步数据之后，手环今日数据变为0？</div>
+                <div class="content">
+                    摩赞手环在与摩赞APP同步数据之后，摩赞手环会清除当前数据重新开始记录，所以手环今日数据变为0，属正常现象。
+                </div>
+            </li>
+            <li>
+                <div class="title">13.手环闹钟可以设置多组吗？</div>
+                <div class="content">
+                    目前摩赞手环的手环闹钟只支持设置1组。
+                </div>
+            </li>
+            <li>
+                <div class="title">14.久坐提醒是什么功能？</div>
+                <div class="content">
+                    久坐提醒是摩赞手环针对办公白领长时间坐办公室没有适量活动的人群开发，帮助提醒他们久坐之后适量活动。
+                </div>
+            </li>
+            <li>
+                <div class="title">15.微信运动是什么功能？如何使用？</div>
+                <div class="content">
+                    微信运动是摩赞手环合作微信运动，将摩赞手环硬件运动数据作为微信运动排行的数据来源，将手环用户运动数据实时同步到微信运动排行榜。
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>

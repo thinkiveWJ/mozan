@@ -1,0 +1,42 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿{
+"success": true,
+"response": [
+    {
+      "menuName": "数据分析",
+      "cls": "person-management-icon",
+      "code": "nav-top",
+      "url": "#dataAnalysis/userStatistics.html",
+      "menus": [
+          {
+            "menuName": "用户统计",
+            "cls": "",
+            "code": "mainDoc-yys",
+            "url": "#dataAnalysis/userStatistics.html",
+            "menus": []
+          },
+          {
+            "menuName": "用户统计",
+            "cls": "",
+            "code": "mainDoc-yys",
+            "url": "#dataAnalysis/userStatistics.html",
+            "menus": []
+          }
+      ]
+    },
+    {
+      "menuName": "用户管理",
+      "cls": "person-management-icon",
+      "code": "nav-top",
+      "url": "#dataAnalysis/userStatistics.html",
+      "menus": [
+        {
+          "menuName": "用户管理",
+          "cls": "",
+          "code": "mainDoc-yys",
+          "url": "#dataAnalysis/userStatistics.html",
+          "menus": []
+        }
+      ]
+    }
+  ]
+}

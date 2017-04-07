@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link href="../../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../../style/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="../../style/ui.chosen.css" rel="stylesheet"/>
+    <link href="../../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="../../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../../js/jQueryRotate.js"></script>
+    <script type="text/javascript" src="../../js/page.common.js"></script>
+    <script type="text/javascript" src="../../js/highcharts.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="main">
+    <div class="container">
+        <div class="row search-box">
+            <h4 class="title">留存分析</h4>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="startDate" class="form-label">开始时间：</label>
+                    <input type="text" id="startDate" class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="endDate" class="form-label">结束时间：</label>
+                    <input type="text" id="endDate" class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">时间段：</label>
+                    <select class="form-input" id="dateChosen" data-xtype="chosen">
+                        <option value="">请选择</option>
+                        <option value="1">最近7天</option>
+                        <option value="2">最近30天</option>
+                        <option value="3">上个月</option>
+                        <option value="4">最近3个月</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12 text-right">
+                <a type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-search"></sapn> 查询</a>
+            </div>
+        </div>
+
+        <div class="chart">
+            <div class="chart-menus">
+                <ul class="chart-menus-box">
+                    <li class="on"><a>次日留存</a></li>
+                    <li><a>7日留存</a></li>
+                    <li><a>30日留存</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <div class="chart-title text-center">
+                <div class="chart-date">2014/09/09-2017/12/12</div>
+            </div>
+            <div class="chart-content" id="userChart">
+
+            </div>
+            <div class="chart-details table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead>
+                    <tr>
+                        <th colspan="12" class="text-center">详细数据</th>
+                    </tr>
+                    <tr>
+                        <td style="margin-left: 15px;"><input id="all" type="checkbox"></td>
+                        <td>注册时间</td>
+                        <td>新增用户</td>
+                        <td>1天后</td>
+                        <td>2天后</td>
+                        <td>3天后</td>
+                        <td>4天后</td>
+                        <td>5天后</td>
+                        <td>6天后</td>
+                        <td>7天后</td>
+                        <td>14天后</td>
+                        <td>30天后</td>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul id="pager"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="retentionAnalysis.js"></script>
+</body>
+</html>

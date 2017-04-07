@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link href="../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jQueryRotate.js"></script>
+    <script type="text/javascript" src="../js/page.common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #D8DCE3">
+
+<div class="login_bcimage">
+    <div class="login-box">
+        <div class="login-slide-bar left">
+            <img src="../images/login.jpg" class="login-logo">
+            <div class="slide-title text-center">摩赞手环后台管理</div>
+        </div>
+        <div class="login-content left">
+            <div class="form-display" style="margin-top: 24px">
+                <label for="userName" class="form-label">用户名：</label>
+                <input type="text" id="userName" class="form-input form-control">
+            </div>
+            <div class="form-display" style="margin-top: 24px">
+                <label for="password" class="form-label">密码：</label>
+                <input type="password" id="password" class="form-input form-control">
+            </div>
+            <div class="form-display" style="margin-top: 24px">
+                <label class="form-label"></label>
+                <a id="loginBTN" type="button" class="btn btn-primary form-input">登录</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="modal fade" id="dialog-error" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>-->
+                <a type="button" class="btn btn-primary ok" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> 确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="login.js"></script>
+</body>
+</html>

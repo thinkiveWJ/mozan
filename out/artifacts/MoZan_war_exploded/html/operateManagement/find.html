@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link href="../../style/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../style/ui.chosen.css">
+    <link href="../../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="../../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../../js/page.common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="main">
+    <div class="container find-manage" >
+        <div class="row search-box">
+            <h4 class="title">发现管理</h4>
+        </div>
+        <div class="banner">
+            <div class="banner-title">Banner</div>
+            <!--<div style="position: absolute;top:45px;left: 15px;"><a href="" class="btn btn-primary">上传</a></div>-->
+            <div class="banner-box">
+                <ul id="banner">
+                    <!--<li><span class="remove"></span><img src="../../images/a.jpg"/></li>-->
+                    <li><img src="../../images/a.jpg"/></li>
+                    <li><img src="../../images/a.jpg"/></li>
+                    <li><img src="../../images/a.jpg"/></li>
+                    <li><img src="../../images/a.jpg"/></li>
+                    <li><input type="file"/></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <div class="share-title">资讯分享</div>
+            <div class="share-nav">
+                <div class="left">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a>出行支付</a></li>
+                        <li class=""><a>运动健康</a></li>
+                        <!--<li><a class=""> <span class="glyphicon glyphicon-plus"></span> </a></li>-->
+                    </ul>
+                </div>
+                <div class="right" style="margin-right:15px;">
+                    <a class="btn btn-primary" id="addInfoBTN"><span class="glyphicon glyphicon-plus"></span> 添加</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="share-content">
+                <ul class="content">
+                    <li>
+                        <div class="image left">
+                            <img src="../../images/a.jpg" alt="">
+                        </div>
+                        <div class="share-content-box left">
+                            <div class="share-content-title">为什么阿斯顿发生地方</div>
+                            <div class="share-content-details">阿发四大皆空大叔大婶大家说</div>
+                        </div>
+                        <div class="right">
+                            <a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> 修改</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <div class="image left">
+                            <img src="../../images/a.jpg" alt="">
+                        </div>
+                        <div class="share-content-box left">
+                            <div class="share-content-title">为什么阿斯顿发生地方</div>
+                            <div class="share-content-details">阿发四大皆空大叔大婶大家说</div>
+                        </div>
+                        <div class="right">
+                            <a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> 修改</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <div class="image left">
+                            <img src="../../images/a.jpg" alt="">
+                        </div>
+                        <div class="share-content-box left">
+                            <div class="share-content-title">为什么阿斯顿发生地方</div>
+                            <div class="share-content-details">阿发四大皆空大叔大婶大家说</div>
+                        </div>
+                        <div class="right">
+                            <a class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> 修改</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+                <ul id="pager"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 添加Banner -->
+<div class="modal fade" id="bannerPanel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加Banner</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="">图片：</label>
+                        <div class="col-sm-10" style="position: relative;overflow: hidden;">
+                            <input type="text" id="uploadPicName" placeholder="上传图片" class="form-control">
+                            <input type="file" id="uploadInput" style="position: absolute;top:0;bottom:0;left:0;right:0;width:1000px;opacity: 0;filter:Alpha(opacity=0);cursor:pointer">
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <mark>请上传500*300大小的jpg/png图片</mark>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="">链接：</label>
+                        <div class="col-sm-10">
+                            <input type="text" placeholder="请输入广告链接" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+                <button type="button" class="btn btn-primary ok"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 资讯分享 -->
+<div class="modal fade" id="informationPanel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">资讯分享</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">类型：</label>
+                        <div class="col-sm-10"><label for="" class="form-control">出行支付</label></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">标题：</label>
+                        <div class="col-sm-10">
+                            <input type="text" placeholder="请输入标题文字" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">图片：</label>
+                        <div class="col-sm-10" style="position: relative;overflow: hidden;">
+                            <input type="text" id="infoPicName" placeholder="上传图片" class="form-control">
+                            <input type="file" id="infoUpload" style="position: absolute;top:0;bottom:0;left:0;right:0;width:1000px;opacity: 0;filter:Alpha(opacity=0);cursor:pointer">
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <mark>请上传500*300大小的jpg/png图片</mark>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">内容：</label>
+                        <div class="col-sm-10">
+                            <textarea id="" placeholder="请输入格式化标题文字" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+                <button type="button" class="btn btn-primary ok"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="find.js"></script>
+</body>
+</html>

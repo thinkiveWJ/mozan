@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link href="../../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../../style/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="../../style/ui.chosen.css" rel="stylesheet"/>
+    <link href="../../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+    <script type="text/javascript" src="../../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../../js/page.common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="main">
+    <div class="container" >
+        <div class="row search-box">
+            <h4 class="title">公交卡充值</h4>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">搜索条件：</label>
+                    <input type="text" id="" placeholder="订单编号/卡公司单号/用户名/用户电话" class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">订单状态：</label>
+                    <select id="sd" data-xtype="chosen" class="form-input">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="startDate" class="form-label">开始时间：</label>
+                    <input type="text" id="startDate"  class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="endDate" class="form-label">结束时间：</label>
+                    <input type="text" id="endDate"  class="form-input form-control">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-display">
+                    <label for="" class="form-label">卡类型：</label>
+                    <select id="s" data-xtype="chosen" class="form-input">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12 text-right search-btn">
+                <a type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-search"></sapn> 查询</a>
+                <a type="button" class="btn btn-primary"><sapn class="glyphicon glyphicon-download-alt"></sapn> 导出</a>
+            </div>
+        </div>
+        <!-- 导出form表单 -->
+        <form action="" id="exportForm">
+            <input type="hidden">
+            <input type="hidden">
+            <input type="hidden">
+            <input type="hidden">
+            <input type="hidden">
+        </form>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead>
+                <td style="margin-left: 15px;"><input id="all" type="checkbox"></td>
+                <td>序号</td>
+                <td>订单编号</td>
+                <td>订单金额</td>
+                <td>订单状态</td>
+                <td>卡类型</td>
+                <td>卡公司单号</td>
+                <td>用户名</td>
+                <td>用户电话</td>
+                <td>创建时间</td>
+                <td>订单备注</td>
+                </thead>
+                <tbody id="tbody">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <ul id="pager"></ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="balanceRecharge.js"></script>
+</body>
+</html>

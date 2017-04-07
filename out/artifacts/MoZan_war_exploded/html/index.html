@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>摩赞 | 手环后台管理</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link href="../style/bootstrap.css" rel="stylesheet"/>
+    <link href="../style/ui.chosen.css" rel="stylesheet"/>
+    <link href="../style/base.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/ui.chosen.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jQueryRotate.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="top" style="overflow: hidden;">
+
+<div class="menus">
+    <div class="cn-header">
+        <img class="logo-icon" src="../images/logo.jpg"/>
+        <span class="logo-txt">摩赞手环后台管理</span>
+    </div>
+    <div class="menu-boxs">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active">
+                <a href="#dataAnalysis/userStatistics.html" class="menu-title">数据分析 <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul class="nav nav-pills nav-stacked menu-box">
+                    <li class="on"><a href="#dataAnalysis/userStatistics.html">用户统计</a></li>
+                    <li ><a href="#dataAnalysis/retentionAnalysis.html">留存分析</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#operateManagement/find.html" class="menu-title">运营管理 <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul class="nav nav-pills nav-stacked menu-box">
+                    <li><a href="#operateManagement/find.html">发现管理</a></li>
+                    <li class="last"><a href="#operateManagement/cardCoupons.html">卡券管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#orderManagement/balanceRecharge.html" class="menu-title">订单管理 <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul class="nav nav-pills nav-stacked menu-box">
+                    <li ><a href="#orderManagement/balanceRecharge.html">余额充值</a></li>
+                    <li ><a href="#orderManagement/busCardRecharge.html">公交卡充值</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#userManagement/userManagement.html" class="menu-title">用户管理 <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul class="nav nav-pills nav-stacked menu-box">
+                    <li><a href="#userManagement/userManagement.html">用户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#rolePower/roleManagement.html" class="menu-title">角色权限 <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul class="nav nav-pills nav-stacked menu-box">
+                    <li><a href="#rolePower/roleManagement.html">角色管理</a></li>
+                    <li class="last"><a href="#rolePower/systemUser.html">系统用户</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="cn-content">
+    <div class="login" style="height: 53px;border-bottom: 2px solid #ddd;">
+        <div class="pull-right" style="padding-right: 24px;">
+            <!--<img src="../images/avater_default.png" class="icon"/>-->
+            <div class="btn-group" style="padding-top:5px;">
+                <a type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                   <span class="glyphicon glyphicon-user"></span> 王俊  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a id="updatePassword">修改密码</a></li>
+                    <li><a href="login.html">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div id="iframeBox" style="position:absolute;top:55px;bottom:0;left:300px;right:0;">
+    <iframe id="contentFrame" name="contentFrame"
+            style="width: 100%;height: 100%;overflow:hidden;border: none; outline: hidden;" frameborder="0"
+            src=""></iframe>
+</div>
+
+<div class="modal fade" id="dialog"  role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>
+                <button type="button" class="btn btn-primary ok"><span class="glyphicon glyphicon-ok"></span> 确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="dialog-error" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-primary cancel" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> 取消</button>-->
+                <a type="button" class="btn btn-primary ok" data-dismiss="modal"><span class="glyphicon glyphicon-ok"></span> 确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/page.common.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
